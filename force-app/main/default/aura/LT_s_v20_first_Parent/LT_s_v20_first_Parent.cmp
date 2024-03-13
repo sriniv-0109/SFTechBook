@@ -1,0 +1,6 @@
+<aura:component >    
+    <aura:handler name="first" event="c:LT_s_v20_first" action="{!c.handleEvent}"/>
+    <lightning:card title="Parent component">
+        <c:LT_s_v20_first_Child/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,15 @@
+<apex:page id="p1">
+    <apex:form id="f1">
+        <apex:inputText id="in1" onchange="capData()"/>
+    </apex:form>
+    <script>
+    function capData(){
+        var a=document.getElementById("p1:f1:in1").value;
+        var regex=/^([A-F$%x-z1-5]+)$/;
+        if(regex.test(a)!=true){
+            alert('Please enter correct data');
+            document.getElementById("p1:f1:in1").value='';
+            }
+    }
+    </script>
+</apex:page>

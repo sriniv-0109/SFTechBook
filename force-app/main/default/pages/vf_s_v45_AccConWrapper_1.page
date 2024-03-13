@@ -1,0 +1,25 @@
+<apex:page controller="s_v45_AccConWrapper_1">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="get Related contacts" action="{!getConForAcc}" reRender="table2"/>
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Accounts" >
+                <apex:pageBlockTable value="{!wrapperList}" var="wrap">
+                    <apex:column >
+                        <apex:inputCheckbox value="{!wrap.isSelected}"/>
+                    </apex:column>
+                    <apex:column value="{!wrap.ac.Name}" headerValue="Account Name"/>
+                    <apex:column value="{!wrap.ac.Industry}" headerValue="Account Industry"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Contacts">
+                <apex:pageBlocktable value="{!conForSelectedAcc}" var="c"  id="table2" >
+                    <apex:column value="{!c.Account.Name}" headerValue="Account Name"/>
+                    <apex:column value="{!c.Name}" headerValue="Contact Name"/>
+                    <apex:column value="{!c.Email}" headerValue="Contact Email"/>
+                </apex:pageBlocktable>
+            </apex:pageBlockSection>                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

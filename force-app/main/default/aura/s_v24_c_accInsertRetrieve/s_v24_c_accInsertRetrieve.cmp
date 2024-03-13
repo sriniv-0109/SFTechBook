@@ -1,0 +1,13 @@
+<aura:component controller="s_v24_accInsertRetrieve">
+    <aura:attribute name="newAccount" type="Account" default="{sObjectType:'Account'}"/>
+    <aura:registerEvent name="accEvent" type="c:s_v24_accInsertRetrieve_event"/>
+    <lightning:card title="Account creation">
+        <aura:set attribute="actions">
+            <lightning:button label="Save" onclick="{!c.handleSave}"/>
+        </aura:set>
+        <lightning:input label="Account Name" value="{!v.newAccount.Name}"/>
+        <lightning:input label="Account Phone" value="{!v.newAccount.Phone}"/>
+        <lightning:input label="Account Rating" value="{!v.newAccount.Rating}"/>
+    </lightning:card>
+	
+</aura:component>

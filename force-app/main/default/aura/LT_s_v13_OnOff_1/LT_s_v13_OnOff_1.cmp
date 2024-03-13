@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="isActive" type="Boolean" default="false"/>
+    <lightning:buttonGroup>
+        <lightning:button label="On" variant="{!v.isActive?'brand':'neutral'}" onclick="{!c.handleOn}"/>
+        <lightning:button label="Off" variant="{!v.isActive?'neutral':'brand'}" onclick="{!c.handleOff}"/>
+    </lightning:buttonGroup>
+    <lightning:carousel disableAutoRefresh="false" disableAutoScroll="false" scrollDuration="3">
+        <lightning:carouselImage
+                  src="{!$Resource.img02}" alt="Image1"
+                  />
+        <lightning:carouselImage
+            src="{!$Resource.img01}" alt="Image2"
+                  />
+        <lightning:carouselImage
+            src="{!$Resource.img03}" alt="Image3"
+                  />
+    </lightning:carousel>
+	
+</aura:component>

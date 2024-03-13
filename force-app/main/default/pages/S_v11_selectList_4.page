@@ -1,0 +1,32 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Select List">
+                <apex:selectList label="Courses" size="4">
+                    <apex:selectOption itemLabel="SalesForce" itemValue="SFDC"></apex:selectOption>
+                    <apex:selectOption itemLabel="Visualforce" itemValue="Vf"></apex:selectOption>
+                    <apex:selectOption itemLabel="Development" itemValue="Dev"></apex:selectOption>
+                    <apex:selectOption itemLabel="LWC" itemValue="lwc"></apex:selectOption>
+                    <apex:selectOption itemLabel="Integration" itemValue="intg"></apex:selectOption>
+                    <apex:selectOption itemLabel="Lightning" itemValue="Aura"></apex:selectOption>
+                    <apex:selectOption itemLabel="Lightning Flows" itemValue="flows"></apex:selectOption>
+                    <apex:selectOption itemLabel="CPQ" itemValue="cpq"></apex:selectOption>
+                    <apex:selectOption itemLabel="JavaScript" itemValue="jv"/>
+                </apex:selectList>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Select Radio">
+                <apex:selectRadio label="Courses">
+                    <apex:selectOption itemLabel="SalesForce" itemValue="SFDC"></apex:selectOption>
+                    <apex:selectOption itemLabel="Visualforce" itemValue="Vf"></apex:selectOption>
+                    <apex:selectOption itemLabel="Development" itemValue="Dev"></apex:selectOption>
+                    <apex:selectOption itemLabel="LWC" itemValue="lwc"></apex:selectOption>
+                    <apex:selectOption itemLabel="Integration" itemValue="intg"></apex:selectOption>
+                    <apex:selectOption itemLabel="Lightning" itemValue="Aura"></apex:selectOption>
+                    <apex:selectOption itemLabel="Lightning Flows" itemValue="flows"></apex:selectOption>
+                    <apex:selectOption itemLabel="CPQ" itemValue="cpq"></apex:selectOption>
+                    <apex:selectOption itemLabel="JavaScript" itemValue="jv"/>
+                </apex:selectRadio>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

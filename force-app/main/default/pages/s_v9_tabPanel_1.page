@@ -1,0 +1,29 @@
+<apex:page standardController="Account">
+    <style>
+        .activeTab{
+        background-color:pink;
+        color:#0c00ff;
+        background-image:none;
+        }
+        .inactiveTab{
+        background-color:red;
+        color:black;
+        }
+    </style>
+    <apex:tabPanel selectedTab="tab2" tabClass="activeTab" inactiveTabClass="inactiveTab">
+        <apex:tab name="tab1" label="SwapnaIT">
+            <apex:image url="https://www.salesforce.com/news/wp-content/uploads/sites/3/2021/05/Salesforce-logo.jpg" alt="SFDC Logo" height="200px"/>
+        </apex:tab>
+        <apex:tab name="tab2" label="Account Details" style="background-color:orange;">
+            <apex:detail relatedList="false" inlineEdit="true"/>
+        </apex:tab>
+        <apex:tab name="tab3" label="Account Owner">
+            <apex:detail subject="{!Account.OwnerId}" relatedList="false"/>
+        </apex:tab>
+        <apex:tab name="tab4" label="Other">
+            User Name:{!$User.FirstName}<br/>
+            Profile:{!$Profile.Name}<br/>
+            Organization:{!$Organization.Name}
+        </apex:tab>
+    </apex:tabPanel>
+</apex:page>

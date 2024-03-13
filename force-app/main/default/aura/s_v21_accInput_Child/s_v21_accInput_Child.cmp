@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="accs" type="Account" default="{sObject:'Account'}"/>
+    <aura:registerEvent name="acEvent" type="c:s_v21_accInput"/>
+    <lightning:card title="Account details">
+        <lightning:input label="Account Name" value="{!v.accs.Name}"/>
+        <lightning:input label="Account Phone" value="{!v.accs.Phone}"/>
+        <lightning:input label="Account Rating" value="{!v.accs.Rating}"/>
+        <aura:set attribute="actions">
+            <lightning:button label="Save" onclick="{!c.handleSave}"/>
+        </aura:set>
+    </lightning:card>
+</aura:component>

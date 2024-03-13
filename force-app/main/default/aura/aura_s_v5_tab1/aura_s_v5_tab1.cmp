@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable" >
+    <lightning:card title="Lightning Tab" footer="Footer">
+        <p>Hi,This is lighting tab with list of courses</p><br/>
+        <ul class="slds-list_dotted slds-is-nested">
+            <li><b>List of Courses</b></li>
+            <ul class="slds-is-nested" style="list-style-type:circle;">
+                <li>Java</li>
+                <li>Apex</li>
+                <li>Python</li>
+            </ul>
+        </ul>        
+    </lightning:card>	
+</aura:component>

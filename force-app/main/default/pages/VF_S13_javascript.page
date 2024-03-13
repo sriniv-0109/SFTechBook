@@ -1,0 +1,14 @@
+<apex:page id="pg" >    
+    <apex:form id="fm">
+        <apex:inputText id="cap" onchange="capText()" >Enter Name</apex:inputText>
+        <script>
+    function capText(){
+        var capName=document.getElementById("pg:fm:cap").value;
+        alert('This is alert 1:'+capName); 
+        
+      var capres=document.getElementById("{!$Component.cap}").value;  
+        alert('This is alert 2:'+capres);
+    }
+    </script>
+    </apex:form>
+</apex:page>

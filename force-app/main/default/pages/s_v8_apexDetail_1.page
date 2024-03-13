@@ -1,0 +1,12 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+    User Name:{!$user.FirstName}&nbsp;&nbsp;Email:{!$user.email}
+    <apex:pageBlock title="Account">
+        <apex:pageBlockSection title="Account Details" columns="1">
+            <apex:detail inlineEdit="true" showChatter="true" relatedList="false"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Account Owner Details" columns="1">
+            <apex:detail subject="{!Account.OwnerId}" relatedList="false"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

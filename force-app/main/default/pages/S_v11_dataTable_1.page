@@ -1,0 +1,9 @@
+<apex:page standardController="Contact" recordSetVar="cons">
+    <apex:pageBlock title="Data Table">
+        <apex:dataTable value="{!cons}" var="c" width="50%" border="2" cellpadding="5">
+            <apex:column headerValue="First Name" value="{!c.FirstName}"/>
+            <apex:column headerValue="Last Name" value="{!c.LastName}"/>
+            <apex:column headerValue="Email" value="{!c.Email}"/>
+        </apex:dataTable>
+    </apex:pageBlock>
+</apex:page>

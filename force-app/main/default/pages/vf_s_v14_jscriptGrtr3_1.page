@@ -1,0 +1,37 @@
+<apex:page id="pg">
+    <apex:form id="fm">
+        <apex:pageBlock id="pb1">
+            <apex:pageBlockSection columns="1" id="pbs1">
+                <apex:pageBlockSectionItem id="pbsi1">
+                    <apex:outputLabel value="Enter Num 1" id="op1"/>
+                        <apex:inputText id="n1"/>
+                    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="pbsi2">
+                    <apex:outputLabel value="Enter Num 2"/>
+                        <apex:inputText id="n2"/>
+                    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem id="pbsi3">
+                    <apex:outputLabel value="Enter Num 3"/>
+                    <apex:inputText id="n3"/>
+                </apex:pageBlockSectionItem>  
+                <apex:commandButton value="Result" onclick="findGreater()"/>
+            </apex:pageBlockSection>             
+        </apex:pageBlock>        
+        </apex:form>
+    <script>
+            function findGreater(){
+            var num1=document.getElementById("pg:fm:pb1:pbs1:pbsi1:op1:n1").value;
+                if(num1=='')
+                {
+                    alert('num1 null');
+                }else{
+                    alert('nnn');
+                    }
+                
+            var num2=document.getElementById("{!$Component.n2}").value;
+            var num3=document.getElementById("{!$Component.n3}").value;
+                }
+        </script>
+</apex:page>

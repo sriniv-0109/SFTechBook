@@ -1,0 +1,16 @@
+<apex:page controller="Jscript_01">
+    <apex:form >
+    <script>
+    function show(){
+        console.log('Iam show with no parameter');
+    }
+    function callMe(name){
+        console.log('Iam callMe with parameter name:'+name);
+    }
+    </script>
+       <apex:commandButton value="Submit" oncomplete="show()"/>
+       <apex:commandButton value="Static" oncomplete="callMe('Satish')"/>
+       <apex:commandButton value="Global" oncomplete="callMe('{!$User.FirstName}')"/> 
+       <apex:commandButton value="Apex Class" oncomplete="callMe('{!name}')"/> 
+    </apex:form>
+</apex:page>

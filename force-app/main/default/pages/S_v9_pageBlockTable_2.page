@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="accts">
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlocktable value="{!accts}" var="ac">
+            <apex:column >
+                <apex:facet name="header">                   
+                    <apex:inputCheckbox />
+                </apex:facet>
+                    <apex:inputCheckbox />
+            </apex:column>
+                
+            <apex:column value="{!ac.Name}"/>
+            <apex:column value="{!ac.Industry}"/>
+            <apex:column value="{!ac.Phone}"/>
+            <apex:column value="{!ac.Rating}"/>
+            <apex:column value="{!ac.Type}"/>
+        </apex:pageBlocktable>        
+    </apex:pageBlock>    
+        <apex:commandLink action="{!previous}" rendered="{!hasPrevious}">Go to Previous Page</apex:commandLink>
+        <apex:commandLink action="{!next}" rendered="{!hasNext}">Go to Next Page</apex:commandLink>
+        </apex:form>
+</apex:page>

@@ -1,0 +1,10 @@
+<aura:component controller="s_v24_accInsertRetrieve">
+    <aura:attribute name="accountsList" type="List" default="[]"/>
+    <aura:attribute name="acolumns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:handler name="accEvent" event="c:s_v24_accInsertRetrieve_event" action="{!c.handleEvent}"/>    
+    <div class="box">
+        <c:s_v24_c_accInsertRetrieve/>
+    </div>
+    <lightning:dataTable keyField="id" data="{!v.accountsList}" columns="{!v.acolumns}"/>
+</aura:component>

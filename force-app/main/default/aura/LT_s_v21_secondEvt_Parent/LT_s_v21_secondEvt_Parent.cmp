@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:handler name="second" event="c:LT_s_v21_secondEvt" action="{!c.handleEvent}"/>
+    <lightning:card title="Parent Component">
+        <c:LT_s_v21_secondEvt_Child/>
+    </lightning:card>
+</aura:component>

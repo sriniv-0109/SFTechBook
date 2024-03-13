@@ -1,0 +1,3 @@
+<apex:page >
+    <apex:image url="https://upload.wikimedia.org/wikipedia/commons/f/f9/Salesforce.com_logo.svg" alt="salesforceLogo" width="90px" height="130px"/>
+</apex:page>

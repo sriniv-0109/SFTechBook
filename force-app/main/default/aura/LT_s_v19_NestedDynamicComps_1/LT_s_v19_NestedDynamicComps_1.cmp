@@ -1,0 +1,7 @@
+<aura:component >
+    <lightning:card title="Nested Dynamic components">
+        <lightning:button label="CreateDynamicButtons" variant="brand" onclick="{!c.handleSubme}"/>
+        {!v.body} 
+    </lightning:card>
+	
+</aura:component>

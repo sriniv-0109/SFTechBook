@@ -1,0 +1,12 @@
+<apex:page standardController="Contact" recordSetVar="cons">
+    <apex:pageBlock title="Data List 2">
+        <apex:dataList value="{!cons}" var="c">
+            <apex:pageBlockSection title="Data List">
+                <apex:outputField value="{!c.FirstName}"/>
+                <apex:outputField value="{!c.LastName}"/>
+                <apex:outputField value="{!c.Email}"/>
+                <apex:outputField value="{!c.Phone}"/>
+            </apex:pageBlockSection>
+        </apex:dataList>
+    </apex:pageBlock>
+</apex:page>

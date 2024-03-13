@@ -1,0 +1,44 @@
+<apex:page controller="Int_v15_integrationClass_1">
+    <apex:form >
+        <apex:pageBlock title="Access Token Details">
+            <p>Access Token:{!accessToken}</p>
+            <p>Instance URL:{!instanceURL}</p>
+            <apex:outputLabel value="Enter Lead Name"/>
+            <apex:inputText value="{!searchLeadName}"/>
+         <apex:commandButton value="Get Token" action="{!requestToken}"/>   
+            <apex:pageBlockTable value="{!leadResponseList}" var="a">
+                <apex:column headerValue="Name" value="{!a.Name}"/>
+                <apex:column headerValue="Email" value="{!a.Email}"/>
+                <apex:column headerValue="Company" value="{!a.Company}"/>
+                <apex:column headerValue="MobilePhone" value="{!a.MobilePhone}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Rest Integration POST Method">
+            Lead Update from Server:{!responseFromServer}<br/><br/>
+            <table>
+                <tr>
+                    <td>Lead First Name:</td>
+                    <td><apex:inputText value="{!lfirstnm}"/></td>
+                </tr>
+                <tr>
+                     <td>Lead Last Name:</td>
+                    <td><apex:inputText value="{!llastnm}"/></td>
+                </tr>
+                <tr>
+                    <td>Lead Email:</td>
+                    <td><apex:inputText value="{!lem}"/></td>
+                </tr>
+                <tr>
+                     <td>Lead Company:</td>
+                    <td><apex:inputText value="{!lcm}"/></td>
+                </tr>
+                <tr>
+                    <td>Lead Mobile Phone:</td>
+                    <td><apex:inputText value="{!lmp}"/></td>
+                </tr>
+            </table>
+            <apex:commandButton value="CreateLead" action="{!createLead}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

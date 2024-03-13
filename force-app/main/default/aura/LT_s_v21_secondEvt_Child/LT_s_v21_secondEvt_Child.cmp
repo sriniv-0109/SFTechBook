@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="empName" type="String"/>
+    <aura:registerEvent name="second" type="c:LT_s_v21_secondEvt"/>
+    <lightning:card title="Child Component">
+        <lightning:input label="Employee Name" value="{!v.empName}"/>
+        <lightning:button label="Submit" onclick="{!c.handleSubme}"/>
+    </lightning:card>
+</aura:component>

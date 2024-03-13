@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:registerEvent name="first" type="c:LT_s_v20_first"/>
+    <lightning:card title="Event">
+        <lightning:button label="Submit" onclick="{!c.handleSubme}"/>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="sampleRec" type="Object"/>
+    <aura:attribute name="recErrors" type="Object"/>
+    <force:recordData aura:id="rec1" recordId="{!v.recordId}"
+                                     fields="Name"
+                                     targetFields="{!v.sampleRec}"
+                                     targetError="{!v.recErrors}"
+                                     mode="EDIT"/>
+    <aura:if isTrue="{!not(empty(v.recEorrors))}">
+        {!v.recErrors}
+    </aura:if>
+    <lightning:card title="Update Records">
+        <lightning:input label="Account Name" value="{!v.sampleRec.Name}"/>
+        <lightning:button label="Submit" onclick="{!c.handleSubme}"/>
+    </lightning:card>
+	
+</aura:component>
